@@ -10,14 +10,6 @@ class Role(models.TextChoices):
 
 class UserManager(BaseUserManager):
 
-    def _create(self, username, password, email, **extra_info):
-        if not username:
-            raise ValueError('Enter username')
-        email = self.normalize_email(email)
-        user = self.model(email=email, username=username, **extra_info)
-        user.set_password(password)
-        user.save()
-        return user
 
     def create_user(self, username, password, email, **extra_info):
         extra_info.setdefault('is_active', True)
