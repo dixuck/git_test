@@ -1,0 +1,7 @@
+djangorestframework
+python-dotenv
+psycopg2-binary
+djangorestframework-simplejwt
+Pillow
+drf-yasg
+celery
